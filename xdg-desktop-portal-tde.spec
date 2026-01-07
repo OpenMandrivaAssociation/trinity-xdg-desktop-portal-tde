@@ -56,6 +56,8 @@ BuildRequires:	trinity-tde-cmake >= %{tde_version}
 BuildRequires:	pkgconfig 
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-1-tqt)
+BuildRequires:  pkgconfig(xrender)
+BuildRequires:  pkgconfig(x11)
 
 %description
 This implementation exposes TDE APIs to applications which use the 
