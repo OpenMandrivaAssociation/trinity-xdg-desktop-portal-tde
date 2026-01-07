@@ -1,9 +1,5 @@
 %bcond clang 1
 
-#
-# Please submit bugfixes or comments via http://www.trinitydesktop.org/
-#
-
 # TDE variables
 %define tde_epoch 2
 %if "%{?tde_version}" == ""
@@ -58,6 +54,8 @@ BuildRequires:	trinity-tde-cmake >= %{tde_version}
 %{!?with_clang:BuildRequires:	gcc-c++}
 
 BuildRequires:	pkgconfig 
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(dbus-1-tqt)
 
 %description
 This implementation exposes TDE APIs to applications which use the 
