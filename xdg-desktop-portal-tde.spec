@@ -1,3 +1,5 @@
+%bcond clang 1
+
 #
 # Please submit bugfixes or comments via http://www.trinitydesktop.org/
 #
@@ -42,7 +44,7 @@ BuildSystem:    cmake
 
 BuildOption:    -DCMAKE_BUILD_TYPE="RelWithDebInfo"
 BuildOption:    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-BuildOption:    -DCMAKE_INSTALL_PREFIX="%{tde_prefix}"
+BuildOption:    -DCMAKE_INSTALL_PREFIX=%{tde_prefix}
 BuildOption:    -DWITH_ALL_OPTIONS=ON
 BuildOption:    -DBUILD_ALL=ON
 BuildOption:    -DWITH_GCC_VISIBILITY=%{!?with_clang:ON}%{?with_clang:OFF}
